@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/image.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylee.css') }}">
+    <title>Jogo da velha </title>
+</head>
+
+<body>
+    <p class="usuario1">jogadores <br>{{nome1}}</p>
+    <button type="submit" onClick=tic_tac_toe.start()>reiniciar</button>
+
+    <div id="register-container">
+
+        <div class="game"></div>
+
+        <script src="/static/js/tic-tac-toe.js"></script>
+        <script>
+            tic_tac_toe.init(document.querySelector('.game'));
+            tic_tac_toe.draw();
+        </script>
+        <audio controls>
+            <source src="{{url_for('static',filename='music/audio.mp3')}}" type="audio/mpeg">
+            <source src="{{url_for('static',filename='music/audio.mp3')}}" type="audio/ogg">
+        </audio>
+</body>
+
+</html>

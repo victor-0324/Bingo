@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo do Bingo</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/image.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- icone de caixa -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- swiper css file link  -->
+</head>
+
+<body>
+    <header>
+        <div class="nav container">
+            <a href="/" class="logo">Jogo <br> <span>Do Bingo</span></a>
+
+            <div class="nav-icons">
+                <i class='bx bx-bell bx-tada' id="bell-icon"><span></span></i>
+                <!-- <i class='bx bxs-download'></i> -->
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <!-- <img srcset="{{ url_for('static',filename='img/Cartela.jpeg')}}" alt=""> -->
+                <!-- <p><span>Essa vai ser a sua cartela quando o narrador <br> fizer a chamada de video  e só clica no número chamado<br> e marca a cartela se você bateu fale para o narrador e peça para conferir as bolas. Há e necessário manda um print da <br>sua cartela no grupo para fazer a conferência</span>
+                </p> -->
+                <div class="navbar">
+                    <li> <a href="#login">Contatos</a></li>
+                    <li> <a href="/narrador">Sala do narrador</a></li>
+                    <li> <a href="/">Sobre nós</a></li>
+                    <li> <a href="https://github.com/victor-0324" target="_blank">Github Vitor</a></li>
+                    <li> <a href="https://github.com/YaraMaria-ux" target="_blank">Github Yara</a></li>
+                </div>
+
+            </div>
+            <!-- notificaçao -->
+            <div class="notification">
+                <div class="notification-box">
+                    <i class='bx bxs-check-circle'></i>
+                    <p>Bem-vindo ao Bingo virtual esse jogo foi feito para facilitar o modo de jogar Bingo <br> você pode participar do jogo sem sair da sua casa, você só precisa ter ‘internet’ e<br>um ‘smartphone’ conectado! &#9989; </p>
+                </div>
+
+                <div class="notification-box box-color">
+                    <i class='bx bxs-x-circle'></i>
+                    <p>Para participar basta criar um grupo de amigos chama seu narrador e começa a partida <br> Faça uma chamada de video com seu narrador e boa sorte</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- início da seleção de casa -->
+    <section class="home container " id="home ">
+        <img srcset="{{ url_for( 'static',filename='img/istockphoto-1205079090-170667a.jpg' )}} " alt=" ">
+        <div class="home-text">
+            <h1>
+                <BR>ON-LINE</BR>
+            </h1>
+        </div>
+    </section>
+    <div class="btn">
+        <P> Desejo boas vindas estou muito ansioso pela sua chegada <br>e muito feliz pela sua presença! Seja muito bem-vindo, amigo!
+        </P>
+    </div>
+    <section class="home container" id="login">
+        <form action="/cartela/" target="_blank" method="POST">
+            <div class="label-float">
+                <input type="text" placeholder=" " name="name" maxlength="15" required/>
+                <label>Digite seu nome</label>
+
+                <a href="#"><button class="btn"> &#127808; Pegue sua cartela &#127808; </button></a>
+            </div>
+        </form>
+    </section>
+
+
+
+
+    <!-- fim da seleção inicial -->
+    <!-- início da seção de tendências -->
+
+    <!-- <section class="trending container " id="trending ">
+        <div class="heading">
+            <i class='bx bxs-flame'></i>
+            <h2>jogos em alta </h2>
+        </div> -->
+    <!-- content -->
+    <!-- <div class="trending-content swiper ">
+            <div class="swiper-wrapper "> -->
+    <!-- slide 1 -->
+    <!-- <div class="swiper-slide ">
+                    <div class="box ">
+                        <img srcset="{{ url_for( 'static',filename='img/indice.png' )}} " alt=" ">
+                        <div class="box-text ">
+                            <h2> Jogo da velha </h2> -->
+    <!-- 
+                            <div class="rating-download ">
+                                <div class="rating "> -->
+    <!-- estrelinha  -->
+    <!-- <i class='bx bxs-star bx-spin'></i>
+                                    <span>4.7</span>
+                                </div> -->
+    <!-- emoji de download -->
+    <!-- <a href="#" class="box-btn "> <i class='bx bxs-download bx-tada'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- <section class="home container">
+            <form action="/jogodavelha/" method="POST">
+                <div class="label-float">
+                    <input type="text" placeholder=" " name="name" maxlength="25" required/>
+                    <label>Jogador 1 ( X ) Jogador 2 </label>
+                    <p><br></p>
+                    <a href="#" name="name"><button class="btn"> &#128525;  Jogar agora    &#128536; </button></a>
+                </div>
+            </form>
+        </section> -->
+    </section>
+
+    <!-- final da seção de tendências -->
+
+    <!-- link swiper file -->
+    <script src="/static/js/swiper-bundle.min.js "></script>
+    <script src="/static/js/main.js "></script>
+</body>
+
+</html>
