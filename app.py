@@ -11,7 +11,7 @@ app = Flask(__name__)
 # criando banco de dados
 engine = sqlalchemy.create_engine(
   "mariadb+mariadbconnector://bingo_game:bingogn@127.0.0.1:3306/jogo_dobingo")
-
+ 
 Base = declarative_base()
  
 class Usuarios(Base):
@@ -26,7 +26,7 @@ class Usuarios(Base):
       self.email = email
       self.password = password #generate_password_hash
 
-  # Cripto grafar a senha 
+  
     # def verify_password(self, pwd):
     #   return check_password_hash(self.password, pwd)
 
