@@ -128,49 +128,6 @@ def login():
 def index():
     return render_template('index.html') 
 
-
-# Tela Das Cartelas
-# @app.route("/cartela/bolas", methods=["GET","POST"])
-# def bolas():
-    
-#     bolas1 = request.form.get('bolas1')
-#     bolas2 = request.form.get('bolas2')
-#     bolas3 = request.form.get('bolas3')
-#     bolas4 = request.form.get('bolas4')
-#     bolas5 = request.form.get('bolas5')
-#     bolas6 = request.form.get('bolas6')
-#     bolas7 = request.form.get('bolas7')
-#     bolas8 = request.form.get('bolas8')
-#     bolas9 = request.form.get('bolas9')
-#     bolas10 = request.form.get('bolas10')
-#     bolas11 = request.form.get('bolas11')
-#     bolas12 = request.form.get('bolas12')
-#     bolas13 = request.form.get('bolas13')
-#     bolas14 = request.form.get('bolas14')
-#     bolas15 = request.form.get('bolas15')
-#     bolas16 = request.form.get('bolas16')
-#     bolas17 = request.form.get('bolas17')
-#     bolas18 = request.form.get('bolas18')
-#     bolas19 = request.form.get('bolas19')
-#     bolas20 = request.form.get('bolas20')
-#     bolas21 = request.form.get('bolas21')
-#     bolas22 = request.form.get('bolas22')
-#     bolas23 = request.form.get('bolas23')
-#     bolas24 = request.form.get('bolas24')
-
-#   # Criando uma sessao no bonco de dados 
-#     Session = sqlalchemy.orm.sessionmaker()
-#     Session.configure(bind=engine)
-#     Session = Session()
-
-#   # Adicionando variaveis no banco de dados 
-#     cart = Bolas_Cartela(bolas1, bolas2, bolas3, bolas4, bolas5, bolas6, bolas7, bolas8, bolas9, bolas10, bolas11, bolas12, bolas13, bolas14, bolas15, bolas16, bolas17, bolas18, bolas19, bolas20, bolas21, bolas22, bolas23, bolas24)
-#     Session.add(cart)
-#     Session.commit()
-#     print(type(bolas1))
-       
-#     return render_template("/cartela.html")
-# Tela Das Cartelas
 @app.route("/cartela/", methods=["GET","POST"])
 def cartela():
    # Se o metodo for igual a post pega as variaveis
